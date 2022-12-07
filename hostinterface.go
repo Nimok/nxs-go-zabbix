@@ -56,15 +56,15 @@ const (
 //
 // see: https://www.zabbix.com/documentation/5.0/manual/api/reference/hostinterface/object#hostinterface
 type HostinterfaceObject struct {
-	InterfaceID int                             `json:"interfaceid,omitempty"`
-	DNS         string                          `json:"dns"`
-	HostID      int                             `json:"hostid,omitempty"`
-	IP          string                          `json:"ip"`
-	Main        int                             `json:"main"` // has defined consts, see above
-	Port        string                          `json:"port"`
-	Type        int                             `json:"type"`  // has defined consts, see above
-	UseIP       int                             `json:"useip"` // has defined consts, see above
-	Details     []HostinterfaceDetailsTagObject `json:"details,omitempty"`
+	InterfaceID int                           `json:"interfaceid,omitempty"`
+	DNS         string                        `json:"dns"`
+	HostID      int                           `json:"hostid,omitempty"`
+	IP          string                        `json:"ip"`
+	Main        int                           `json:"main"` // has defined consts, see above
+	Port        string                        `json:"port"`
+	Type        int                           `json:"type"`  // has defined consts, see above
+	UseIP       int                           `json:"useip"` // has defined consts, see above
+	Details     HostinterfaceDetailsTagObject `json:"details,omitempty"`
 
 	// Items []ItemObject `json:"items,omitempty"` // not implemented yet
 	Hosts []HostObject `json:"hosts,omitempty"`
